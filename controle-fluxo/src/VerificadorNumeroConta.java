@@ -25,9 +25,7 @@ public class VerificadorNumeroConta {
         if (numeroConta.length() != 8) {
             // TODO: Lançar uma IllegalArgumentException com a seguinte mensagem:
             // "Numero de conta invalido. Digite exatamente 8 digitos."
-            throw new IllegalArgumentException();
-            
-            return ;//"Numero de conta invalido. Digite exatamente 8 digitos.";
+            throw new IllegalArgumentException("Numero de conta invalido. Digite exatamente 8 digitos.");
         }
     }
 }
