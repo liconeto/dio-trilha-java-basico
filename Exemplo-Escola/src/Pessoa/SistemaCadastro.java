@@ -1,8 +1,13 @@
 package Pessoa;
 
 public class SistemaCadastro {
-	Pessoa marcos = new Pessoa();
+	public static void main(String[] args) {
+		
+	Pessoa marcos = new Pessoa( "123", "Marcos");
 	
 	marcos.setEndereco("RUA DAS MARIAS");
+		
+	System.out.println(marcos.getNome()+"-"+ marcos.getCpf());
 	
+	}
 }

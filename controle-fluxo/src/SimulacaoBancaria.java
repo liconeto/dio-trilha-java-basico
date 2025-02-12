@@ -7,6 +7,14 @@ public class SimulacaoBancaria {
         double saldo = 0;
         boolean continuar = true;
 
+        System.out.println("Iniciando o Caixa Eletrônica PastelBank");
+        
+        System.out.println("Escolha uma opção abaixo:");
+        System.out.println("1 = para depositar");
+        System.out.println("2 = para sacar");
+        System.out.println("3 = ver o saldo");
+        System.out.println("0 = encerrar");
+
         while (continuar) {
 
             int opcao = scanner.nextInt();
