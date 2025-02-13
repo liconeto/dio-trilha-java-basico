@@ -1,5 +1,6 @@
 package candidatura;
 
+import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class ProcessoSeletivo {
@@ -8,6 +9,60 @@ public class ProcessoSeletivo {
 		analisarCandidato(1900.0);
 		analisarCandidato(2200.0);
 		analisarCandidato(2000.0);
+		
+		selecaoCandidatos();
+		imprimirselecionados();
+		
+		String [] candidatos = {"FELIPE", "MARCIA", "JULIA", "PAULO", "AUGUSTO"};
+		for (String candidato : candidatos) {
+			entrandoEmContato(candidato);
+			
+		}
+	}
+	
+	static void entrandoEmContato(String candidato) {
+		int tentativasRealizadas = 1;
+		boolean continuarTentando = true;
+		boolean atendeu=false;
+		
+		do {
+			
+			atendeu = atender();
+			continuarTentando = !atendeu;
+			if(continuarTentando) {
+				tentativasRealizadas++;
+			} else {
+				System.out.println("CONTATO REALIZADO COM SUCESSO");
+			}
+				
+			
+		}while(continuarTentando && tentativasRealizadas < 3);
+		
+		if(atendeu){
+			System.out.println("CONSEGUIMOS CONTATO COM " + candidato + " NA "+ tentativasRealizadas);
+		} else {
+			System.out.println("NÃO CONSEGUIMOS CONTATO COM " + candidato +", NUMERO MAXIMO DA TETAIVAS REALIZADA");
+		}
+		
+	}
+	
+	static boolean atender() {
+		return new Random().nextInt(3)==1;
+	}
+	
+	static void imprimirselecionados() {
+		String [] candidatos = {"FELIPE", "MARCIA", "JULIA", "PAULO", "AUGUSTO"};
+		System.out.println("Imprimindo a lista de candidatos informando o Indice do elemento");
+		
+		for (int indice=0; indice < candidatos.length; indice++) {
+			System.out.println("O candidato de nº "+ (indice+1) + " é o " + candidatos[indice]);
+		}
+		
+		System.out.println("Forma abreviada de interação for each");
+		
+		for (String candidato : candidatos) {
+			System.out.println("O candidato selecionado foi " + candidato);
+		}
 		
 	}
 	
@@ -18,18 +73,22 @@ public class ProcessoSeletivo {
 		
 		int candidatosSelecionados = 0;
 		int candidatoAtual =0;
-		while (candidatosSelecionados < 5) {
+		double salarioBase = 2000.0;
+		while (candidatosSelecionados < 5 && candidatoAtual < candidatos.length) {
 			String candidato = candidatos[candidatoAtual];
 			double salarioPretendido = valorPretendido();
 			
 			System.out.println("O candidato " + candidato + " solcitou este valor de salário " + salarioPretendido);
 			if(salarioBase >= salarioPretendido) {
+				System.out.println("O candidato " + candidato + " foi selecionado para a vaga");
+				candidatosSelecionados++;
 				
 			}
+			candidatoAtual++;
 		}
 	}
 	
-	static void valorPretendido() {
+	static double valorPretendido() {
 		return ThreadLocalRandom.current().nextDouble(1800, 2200);
 	}
 	
