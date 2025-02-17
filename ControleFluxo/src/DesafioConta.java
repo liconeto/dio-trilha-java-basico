@@ -14,7 +14,7 @@ public class DesafioConta {
         double transacao3 = scanner.nextDouble();
 
         // TODO: Na linha abaixo, realize o cálculo do saldo final:
-        double saldoFinal = saldoFinal + transacao1 + transacao2 + transacao3 ;
+        double saldoFinal = saldoInicial + transacao1 + transacao2 + transacao3 ;
         // Saldo final
         System.out.printf("%.2f\n", saldoFinal);
 
