@@ -17,7 +17,7 @@ public class Main {
         	System.out.print(""+ letra);	
 		}
         
-        
+        System.out.println(" ");
         System.out.println(" Vamos abrir sua conta para isso informe os dados abaixo!");
         
         System.out.println(" Informe a agencia:");
@@ -29,10 +29,15 @@ public class Main {
         System.out.println(" Informe o titular");
         String titular = scanner.next();
         
-        System.out.println(" Informe a conta");
+        System.out.println(" Informe o saldo inicial");
         double saldo = scanner.nextDouble();
         
         Conta clienteConta = new Conta(agencia, numeroConta, titular, saldo);
+        
+        System.out.println("Olá " + clienteConta.getTitular() + ", bem-vindo ao DIO-Bank.");
+        System.out.println("Sua agencia: " + clienteConta.getAgencia() + ", e a conta: "+ clienteConta.getNumeroConta() + " ." );
+        System.out.println("Seu saldo: " + clienteConta.getSaldo() + " e o limite: " + clienteConta.getLimite() );
+        System.out.println(" ");
         
         System.out.println("  Escolha uma opção abaixo:");
         System.out.println("	1 = Consultar Saldo");
@@ -50,59 +55,55 @@ public class Main {
             switch (opcao) {
                 case 1:
                     // TODO: imprimir o saldo.
-                    System.out.println("Saldo atual :"+saldo);
+                    System.out.println("Saldo atual :"+ clienteConta.getSaldo());
                     break;
                 case 2:
                     // TODO: Imprimir limite do cheque especial.
-                    System.out.println("Saldo atual :"+saldo);
-                    System.out.println("Saldo do cheque especial :"+ chequeEspecial);
-                    System.out.println("Saldo atual: "+ saldo + "+ cheque especial: "+ chequeEspecial + " = "+ (saldo + chequeEspecial));
+                    System.out.println("Saldo atual :"+ clienteConta.getSaldo());
+                    System.out.println("Saldo do cheque especial :"+ clienteConta.getLimite());
+                    System.out.println("Saldo atual: "+ clienteConta.getSaldo() + "+ cheque especial: "+ clienteConta.getLimite() +" = "+ (clienteConta.getSaldo() + clienteConta.getLimite() ));
                     break;
                 case 3:
                     // TODO: Exibir o saldo atual da conta.
                 	Double depositado = scanner.nextDouble();
-                    System.out.println("Saldo atual :"+saldo);
+                	clienteConta.depositar(depositado);
+                    
                     break;
                 case 4:
-                    // TODO: Ler o valor a ser depositado e atualizar/imprimir o saldo.
+                    // TODO: Ler o valor a ser sacado e atualizar/imprimir o saldo.
                     Double sacar = scanner.nextDouble();
-                    if(sacar > (saldo + chequeEspecial)) {
-                    	System.out.println("Salo insulficiente");
-                    } else if (sacar > saldo && sacar < (saldo + chequeEspecial)) {
+                    if(sacar > (clienteConta.getSaldo() + clienteConta.getLimite() )) {
+                    	System.out.println("Saldo insulficiente");
+                    	
+                    } else if (sacar > clienteConta.getSaldo() && sacar < (clienteConta.getSaldo() + clienteConta.getLimite() )) {
                     	System.out.println("Para realizar esse saque você precisará usar o cheque especial!");
                     	System.out.println("Deseja continuar? 1 = SIM | 0 = Não");
-                    	String usaCheque = scanner.next();
-                    	double saldoTotal;
+                    	int usaCheque = scanner.nextInt();
+                    	
                     	switch (usaCheque) {
-						case "S":
+						case 1:
 							System.out.println("Saque realizado com sucesso !");
-							saldoTotal = saldo + chequeEspecial;
-							saldoTotal = (sacar - saldo ) - chequeEspecial;
-							System.out.println(" "+ saldoTotal);							
+							clienteConta.sacar(sacar);
+							System.out.println(" "+ clienteConta.getSaldo());							
 							break;
-						case "s":
-							System.out.println("Saque realizado com sucesso !");
-							saldoTotal = saldo + chequeEspecial;
-							saldoTotal = (sacar - saldo ) - chequeEspecial;
-							System.out.println(" "+ saldoTotal);							
-							break;
-
+				
 						default:
 		                    System.out.println("Opção inválida. Tente novamente.");
 						}
+                    } else {
+                    	clienteConta.sacar(sacar);
+						System.out.println(" "+ clienteConta.getSaldo());
                     }
-                    saldo = saldo - sacar;
-                    System.out.println("Saldo atual :"+saldo);
                     break;
                 case 5:
                     // TODO: Ler o valor a ser depositado e atualizar/imprimir o saldo.
                 	System.out.println("Digite o código do Boleto");
-                    int codigoBoleto = scanner.nextInt();
+                    String codigoBoleto = scanner.next();
                     
                     System.out.println("Digite o valor do boleto");
                 	Double valorBoleto = scanner.nextDouble();
-                	
-                    System.out.println("Saldo atual :"+saldo);
+                	clienteConta.pagBoleto(codigoBoleto, valorBoleto);
+                    System.out.println("Saldo atual :"+ clienteConta.getSaldo());
                     break;
                 case 6:
                     // TODO: Ler o valor a ser depositado e atualizar/imprimir o saldo.
