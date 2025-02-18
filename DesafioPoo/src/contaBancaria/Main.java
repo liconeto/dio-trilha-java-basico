@@ -8,8 +8,6 @@ public class Main {
 		// TODO Auto-generated method stub
 
         Scanner scanner = new Scanner(System.in);
-        double saldo = 0;
-        double chequeEspecial = 0;
         boolean continuar = true;
         
         String letras = "..:: Iniciando o Caixa Eletrônico DIO-Bank ::..";
@@ -20,7 +18,22 @@ public class Main {
 		}
         
         
-        System.out.println(" ");
+        System.out.println(" Vamos abrir sua conta para isso informe os dados abaixo!");
+        
+        System.out.println(" Informe a agencia:");
+        String agencia = scanner.next();
+        
+        System.out.println(" Informe a conta");
+        String numeroConta = scanner.next();
+        
+        System.out.println(" Informe o titular");
+        String titular = scanner.next();
+        
+        System.out.println(" Informe a conta");
+        double saldo = scanner.nextDouble();
+        
+        Conta clienteConta = new Conta(agencia, numeroConta, titular, saldo);
+        
         System.out.println("  Escolha uma opção abaixo:");
         System.out.println("	1 = Consultar Saldo");
         System.out.println("	2 = Consultar cheque Especial");
@@ -105,10 +118,5 @@ public class Main {
         }
         scanner.close();
     }
-	
-	public static void criaConta() {
-		
-		conta = new Conta(); 
-	}
 
 }

@@ -1,11 +1,14 @@
 public class Conta {
     // Atributos
+	private String agencia;
     private String numeroConta;
     private String titular;
     private double saldo;
+    private double limite;
 
     // Construtor
-    public Conta(String numeroConta, String titular, double saldoInicial) {
+    public Conta(String agencia, String numeroConta, String titular, double saldoInicial) {
+    	this.agencia = agencia;
         this.numeroConta = numeroConta;
         this.titular = titular;
         this.saldo = saldoInicial;
