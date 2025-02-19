@@ -7,19 +7,21 @@ public class Carro {
 	private int velocidade = 0;
 	
 	
-	public Carro(boolean statusCarro , String cambio, int velocidade) {
-		this.statusCarro = statusCarro ;
-		this.cambio = cambio ;
-		this.velocidade =  velocidade ;		
+	public Carro() {
+		this.statusCarro = false ;
+		this.cambio = "N" ;
+		this.velocidade =  0;		
 	}
 	
 	
 	public void ligarCarro() {
 		
 		
+		
 	}
 
 	public boolean isStatusCarro() {
+		
 		return statusCarro;
 	}
 
