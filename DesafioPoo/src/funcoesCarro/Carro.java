@@ -2,9 +2,9 @@ package funcoesCarro;
 
 public class Carro {
 	
-	private boolean statusCarro = false;
-	private String cambio = "N";
-	private int velocidade = 0;
+	private boolean statusCarro ;
+	private String cambio ;
+	private int velocidade ;
 	
 	
 	public Carro() {

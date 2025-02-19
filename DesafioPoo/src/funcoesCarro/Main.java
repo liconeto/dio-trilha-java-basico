@@ -16,20 +16,48 @@ public class Main {
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
 		Scanner scanner = new Scanner(System.in);
-		 
+		boolean continuar = true;
+		String ligaCarro ;
 		
 		Carro carroOne = new Carro();
 		
-		String letras = " ..::  Iniciando o Sistema DIO-Car 3000  ::.. ";
-		String boasVindas = " ..:: Estou pronto, Dirija com segurança! ::.. ";
+		while (continuar) {
+		
+			String letras = " ..::  Iniciando o Sistema DIO-Car 3000  ::.. ";
+			String boasVindas = " ..:: Estou pronto, Dirija com segurança! ::.. ";
         
-		carregandoTexto(letras);
-        System.out.println(" ");
-        carregandoTexto(boasVindas);   
-        System.out.println(" ");
-        carroLigado(carroOne.isStatusCarro());
-        System.out.println("O cambio está : "+ carroOne.getCambio() + " velocidade: "+carroOne.getVelocidade());
+			carregandoTexto(letras);
+	        System.out.println(" ");
+	        carregandoTexto(boasVindas);
+	        
+	        do {
+		        System.out.println(" ");
+		        System.out.print("O motor do carro está :");
+		        carroLigado(carroOne.isStatusCarro());
+		        System.out.println(" e o cambio está : "+ ANSI_CIANO + carroOne.getCambio() + ANSI_RESET + " velocidade: "+carroOne.getVelocidade());
+	        
+		        System.out.println("Deseja ligar o carro ? | S = Sim , N = Não");
+		        ligaCarro = scanner.next();
+		        
+		        switch (ligaCarro) {
+		        	case "S":
+		        		
+		        		break;
+		        	case "N":
+		        		
+		        		break;
+	        		default:
+	        			System.out.println("Opção inválida. Tente novamente.");
+		        }
+		        
+	        
+	        	System.out.println("Opção escolhida! : "+ ligaCarro);
+	        	
+	        } while( ligaCarro == "N");
+	        
+	        
 
+		}
 	}
 	
 	public static void carregandoTexto(String texto) throws InterruptedException {
@@ -42,10 +70,11 @@ public class Main {
 	
 	public static void carroLigado(boolean isCarro) {
 		if(isCarro == false) {
-			System.out.println(ANSI_RED+"Desligado!"+ANSI_RESET);
+			System.out.print(ANSI_RED+"Desligado!"+ANSI_RESET);
 		}else {
-			System.out.println(ANSI_BLUE+"Ligado!"+ANSI_RESET);
+			System.out.print(ANSI_BLUE+"Ligado!"+ANSI_RESET);
 		}
 	}
+
 
 }
