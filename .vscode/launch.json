@@ -1,0 +1,245 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": "ControleDeCandidatos"
+        },
+        {
+            "type": "java",
+            "name": "ProcessoSeletivo",
+            "request": "launch",
+            "mainClass": "candidatura.ProcessoSeletivo",
+            "projectName": "ControleDeCandidatos"
+        },
+        {
+            "type": "java",
+            "name": "AboutMe",
+            "request": "launch",
+            "mainClass": "AboutMe",
+            "projectName": "ControleFluxo"
+        },
+        {
+            "type": "java",
+            "name": "App(1)",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": "ControleFluxo"
+        },
+        {
+            "type": "java",
+            "name": "BarraDeProgresso",
+            "request": "launch",
+            "mainClass": "BarraDeProgresso",
+            "projectName": "ControleFluxo"
+        },
+        {
+            "type": "java",
+            "name": "CaixaEletronico",
+            "request": "launch",
+            "mainClass": "CaixaEletronico",
+            "projectName": "ControleFluxo"
+        },
+        {
+            "type": "java",
+            "name": "CepInvalidoExcepion",
+            "request": "launch",
+            "mainClass": "CepInvalidoExcepion",
+            "projectName": "ControleFluxo"
+        },
+        {
+            "type": "java",
+            "name": "ControleSimplesDeSaques",
+            "request": "launch",
+            "mainClass": "ControleSimplesDeSaques",
+            "projectName": "ControleFluxo"
+        },
+        {
+            "type": "java",
+            "name": "DesafioConta",
+            "request": "launch",
+            "mainClass": "DesafioConta",
+            "projectName": "ControleFluxo"
+        },
+        {
+            "type": "java",
+            "name": "ExempliWhile",
+            "request": "launch",
+            "mainClass": "ExempliWhile",
+            "projectName": "ControleFluxo"
+        },
+        {
+            "type": "java",
+            "name": "ExemploBreakContinue",
+            "request": "launch",
+            "mainClass": "ExemploBreakContinue",
+            "projectName": "ControleFluxo"
+        },
+        {
+            "type": "java",
+            "name": "ExemploDoWhile",
+            "request": "launch",
+            "mainClass": "ExemploDoWhile",
+            "projectName": "ControleFluxo"
+        },
+        {
+            "type": "java",
+            "name": "ExemploExcecao",
+            "request": "launch",
+            "mainClass": "ExemploExcecao",
+            "projectName": "ControleFluxo"
+        },
+        {
+            "type": "java",
+            "name": "ExemploFor",
+            "request": "launch",
+            "mainClass": "ExemploFor",
+            "projectName": "ControleFluxo"
+        },
+        {
+            "type": "java",
+            "name": "ExemploForArray",
+            "request": "launch",
+            "mainClass": "ExemploForArray",
+            "projectName": "ControleFluxo"
+        },
+        {
+            "type": "java",
+            "name": "FormatadorCepExemplo",
+            "request": "launch",
+            "mainClass": "FormatadorCepExemplo",
+            "projectName": "ControleFluxo"
+        },
+        {
+            "type": "java",
+            "name": "PlanoOperadora",
+            "request": "launch",
+            "mainClass": "PlanoOperadora",
+            "projectName": "ControleFluxo"
+        },
+        {
+            "type": "java",
+            "name": "ResultadoEscolar",
+            "request": "launch",
+            "mainClass": "ResultadoEscolar",
+            "projectName": "ControleFluxo"
+        },
+        {
+            "type": "java",
+            "name": "SimulacaoBancaria",
+            "request": "launch",
+            "mainClass": "SimulacaoBancaria",
+            "projectName": "ControleFluxo"
+        },
+        {
+            "type": "java",
+            "name": "SistemaMedida",
+            "request": "launch",
+            "mainClass": "SistemaMedida",
+            "projectName": "ControleFluxo"
+        },
+        {
+            "type": "java",
+            "name": "VerificacaoChequeEspecial",
+            "request": "launch",
+            "mainClass": "VerificacaoChequeEspecial",
+            "projectName": "ControleFluxo"
+        },
+        {
+            "type": "java",
+            "name": "VerificadorElegibilidadeConta",
+            "request": "launch",
+            "mainClass": "VerificadorElegibilidadeConta",
+            "projectName": "ControleFluxo"
+        },
+        {
+            "type": "java",
+            "name": "VerificadorNumeroConta",
+            "request": "launch",
+            "mainClass": "VerificadorNumeroConta",
+            "projectName": "ControleFluxo"
+        },
+        {
+            "type": "java",
+            "name": "Autodromo",
+            "request": "launch",
+            "mainClass": "Carro.Autodromo",
+            "projectName": "Exemplo-Escola"
+        },
+        {
+            "type": "java",
+            "name": "Escola",
+            "request": "launch",
+            "mainClass": "Escola.Escola",
+            "projectName": "Exemplo-Escola"
+        },
+        {
+            "type": "java",
+            "name": "Fabrica",
+            "request": "launch",
+            "mainClass": "Interface.estabelecimento.Fabrica",
+            "projectName": "Exemplo-Escola"
+        },
+        {
+            "type": "java",
+            "name": "SistemaCadastro",
+            "request": "launch",
+            "mainClass": "Pessoa.SistemaCadastro",
+            "projectName": "Exemplo-Escola"
+        },
+        {
+            "type": "java",
+            "name": "SistemaIbge",
+            "request": "launch",
+            "mainClass": "Pessoa.SistemaIbge",
+            "projectName": "Exemplo-Escola"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "HerancaEPolimorfismo"
+        },
+        {
+            "type": "java",
+            "name": "Main(1)",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "Poo"
+        },
+        {
+            "type": "java",
+            "name": "Contador",
+            "request": "launch",
+            "mainClass": "Contador",
+            "projectName": "desafio-controle-fluxo"
+        },
+        {
+            "type": "java",
+            "name": "Estabelecimento",
+            "request": "launch",
+            "mainClass": "lanchonete.Estabelecimento",
+            "projectName": "exemplo-pacotes"
+        },
+        {
+            "type": "java",
+            "name": "Iphone",
+            "request": "launch",
+            "mainClass": "iPhone.Iphone",
+            "projectName": "iPhone"
+        }
+    ]
+}
